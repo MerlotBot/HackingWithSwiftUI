@@ -12,12 +12,15 @@ struct ContentView : View {
     
     var body: some View {
         
-        Text("Hello World")
+        VStack {
+        Rectangle()
+        .fill(Color.red)
+            .frame(width: 200, height: 200)
         .padding()
-        .foregroundColor(.white)
-        .background(LinearGradient(gradient: Gradient(colors: [.white, .blue]), startPoint: .top, endPoint: .bottom), cornerRadius: 10)
-        
-        
+        Circle()
+        .fill(Color.blue)
+            .frame(width: 50, height: 50)
+        }
     }
 }
 
