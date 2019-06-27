@@ -9,8 +9,28 @@
 import SwiftUI
 
 struct ContentView : View {
+   
+    static let taskDateFormat: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .long
+        return formatter
+    }()
+    
+    var dueDate = Date()
+    
+    
     var body: some View {
-        Text("Hello World")
+        
+        VStack {
+            Image("example-image")
+            
+            Text("Task due date: \(dueDate, formatter: Self.taskDateFormat)")
+                .background(Color.black)
+                .foregroundColor(Color.orange)
+                .font(.largeTitle)
+                .lineLimit(nil)
+                .multilineTextAlignment(.center)
+        }
     }
 }
 
