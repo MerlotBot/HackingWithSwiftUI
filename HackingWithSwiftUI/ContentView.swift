@@ -9,21 +9,13 @@
 import SwiftUI
 
 struct ContentView : View {
-   
-    static let taskDateFormat: DateFormatter = {
-        let formatter = DateFormatter()
-        formatter.dateStyle = .long
-        return formatter
-    }()
-    
-    var dueDate = Date()
-    
     
     var body: some View {
         
-        Image("example-image")
-        .resizable()
-        .aspectRatio(contentMode: .fit)
+        Text("Hello World")
+        .padding()
+        .foregroundColor(.white)
+        .background(LinearGradient(gradient: Gradient(colors: [.white, .blue]), startPoint: .top, endPoint: .bottom), cornerRadius: 10)
         
         
     }
