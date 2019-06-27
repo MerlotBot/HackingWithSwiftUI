@@ -21,20 +21,11 @@ struct ContentView : View {
     
     var body: some View {
         
-        VStack {
-            Image(systemName: "cloud.heavyrain.fill")
-            .foregroundColor(.red)
-            .font(.largeTitle)
-            
-            
-            
-            Text("Task due date: \(dueDate, formatter: Self.taskDateFormat)")
-                .background(Color.black)
-                .foregroundColor(Color.orange)
-                .font(.largeTitle)
-                .lineLimit(nil)
-                .multilineTextAlignment(.center)
-        }
+        Image("example-image")
+        .resizable()
+        .aspectRatio(contentMode: .fit)
+        
+        
     }
 }
 
