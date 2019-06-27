@@ -22,7 +22,11 @@ struct ContentView : View {
     var body: some View {
         
         VStack {
-            Image("example-image")
+            Image(systemName: "cloud.heavyrain.fill")
+            .foregroundColor(.red)
+            .font(.largeTitle)
+            
+            
             
             Text("Task due date: \(dueDate, formatter: Self.taskDateFormat)")
                 .background(Color.black)
